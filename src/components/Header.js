@@ -1,5 +1,4 @@
 //Header for Home Page 
-  
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
@@ -10,7 +9,7 @@ function Header() {
       <div className="header-links">
         <ElectricBoltIcon />
         <Link to="#" id="logo-link">Every Volt</Link>
-        <Link to="#">Locations</Link>
+        <Link to="/locations">Locations</Link>
       </div>
 
       <div className="header-links">
