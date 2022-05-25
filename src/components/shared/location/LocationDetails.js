@@ -1,8 +1,7 @@
 //one location details - just one specific location user selected.
 import React, { useState, useEffect } from "react";
 
-function LocationDetails({
-    title, address, town, postcode, telephone, isOperational, isUserSelectable, 
+function LocationDetails({title, address, town, postcode, telephone, isOperational, isUserSelectable, 
     statusTypeTitle, cost, isPayAtLocation, usageTypeTitle}) {
     
     useEffect(() => {
@@ -16,7 +15,7 @@ function LocationDetails({
             <span>{title}</span> 
           </div>
           {expanded ?
-            (<div className="cardFull">
+            (<a href="/locations/id"><div className="cardFull">
             <span>{address}</span> 
             <span>{town}</span>
             <span>{postcode}</span>
@@ -27,16 +26,13 @@ function LocationDetails({
             <span>{cost}</span>
             <span>{isPayAtLocation}</span>
             <span>{usageTypeTitle}</span>
-            {/* <a href="/locations/id">see more</a> */}
-          </div>
+          </div></a>
             ) 
             : null
-            }
-          
+            }  
     
         </li>
-    )
-    
+    )    
 }
 
 
