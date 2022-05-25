@@ -21,6 +21,7 @@ function Locations() {
   return (
     <div className="list-container" >
         {locations.map(locations => {
+          // console.log(locations.UsageType.Title)
           return (
             <ul className="LocDiv" key={locations.ID}>
              <LocationDetails
@@ -46,3 +47,6 @@ function Locations() {
   }
 
 export default Locations
+
+ //locDet comp 
+             //set link to locationdetail
