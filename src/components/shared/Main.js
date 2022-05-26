@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Locations from './location/Locations'
 import { Routes, Route } from 'react-router-dom'
-const URL = "http://localhost:4000/locations/"
+const URL = "https://every-volt-back.herokuapp.com/"
 
 
 function Main() {
