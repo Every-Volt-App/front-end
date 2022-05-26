@@ -17,16 +17,16 @@ function LocationDetails({
           </div>
           {expanded ?
             (<div className="cardFull">
-            <span>{address}</span> 
-            <span>{town}</span>
-            <span>{postcode}</span>
-            <span>{telephone}</span>
-            <span>{isOperational}</span>
-            <span>{isUserSelectable}</span>
-            <span>{statusTypeTitle}</span>
-            <span>{cost}</span>
-            <span>{isPayAtLocation}</span>
-            <span>{usageTypeTitle}</span>
+            <span className='addy'> Address: {address}</span> 
+            <span className='addy'>{town}</span>
+            <span className='addy'>{postcode}</span>
+            <span className='stretch'>{telephone}</span>
+            <span className='stretch'>Operational: {isOperational}</span>
+            <span className='stretch'>{isUserSelectable}</span>
+            <span className='stretch'>{statusTypeTitle}</span>
+            <span className='stretch'>{cost}</span>
+            <span className='stretch'>{isPayAtLocation}</span>
+            <span className='stretch'>{usageTypeTitle}</span>
             {/* <a href="/locations/id">see more</a> */}
           </div>
             ) 

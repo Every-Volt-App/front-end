@@ -99,3 +99,7 @@ a:active {
   text-decoration: none; 
   color: gray; 
 }
+
+.stretch {
+  display: block;
+}
