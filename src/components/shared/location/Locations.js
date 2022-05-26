@@ -8,7 +8,7 @@ function Locations(props) {
   return (
     <div className="list-container">
             {props.locations.map((location, idx) => 
-             <div key={idx} className="location-card" >{location.name}</div>)}
+             <div key={idx} className="location-card" >{location.AddressInfo.Title}</div>)}
     </div>
   )
              }
