@@ -9,13 +9,13 @@ function Header() {
     <div className="header">
       <div className="header-links">
         <ElectricBoltIcon />
-        <Link to="#" id="logo-link">Every Volt</Link>
-        <Link to="#">Locations</Link>
+        <Link to="/" id="logo-link">Every Volt</Link>
+        <Link to="/">Locations</Link>
       </div>
 
       <div className="header-links">
-        <Link to="#" id="signup-link">Sign Up</Link>
-        <Link to="#">Sign In</Link>
+        <Link to="/sign-up" id="signup-link">Sign Up</Link>
+        <Link to="/log-in">Sign In</Link>
       </div>
 
     </div>
