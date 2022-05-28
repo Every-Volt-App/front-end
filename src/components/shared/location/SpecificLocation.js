@@ -29,7 +29,7 @@ console.log(thisLocation.AddressInfo.title)
         <span className="addy">{thisLocation.AddressInfo.Postcode}</span>
         <span className="stretch">{thisLocation.UsageCost}</span>
         <span className="stretch">{thisLocation.AddressInfo.ContactTelephone1}</span>
-        <span className="stretch">{thisLocation.StatusType.IsOperational}</span>
+        <span className="stretch">Operational: {thisLocation.StatusType.IsOperational}</span>
         <span className="stretch">{thisLocation.StatusType.IsUserSelectable}</span>
         <span className="stretch">{thisLocation.StatusType.Title}</span>
         <span className="stretch">{thisLocation.UsageType.IsPayAtLocation}</span>
