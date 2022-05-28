@@ -25,7 +25,7 @@ function App() {
   }
 
   useEffect(() => getLink(), [])
-  console.log(data)
+  // console.log(data)
 
   if (!data) {
     return <h2>Loading</h2>

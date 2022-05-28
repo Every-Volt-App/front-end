@@ -37,6 +37,7 @@ function Locations() {
               cost={locations.UsuageCost}
               isPayAtLocation={locations.UsageType.IsPayAtLocation}
               usageTypeTitle={locations.UsageType.Title}
+              id={locations.ID}
              />
               </ul>
           )
