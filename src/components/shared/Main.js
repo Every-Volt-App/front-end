@@ -7,23 +7,22 @@ function Main() {
   console.log(process.env)
 
   const searchOptions = {
-    key: "3d636052-e9ab-4daa-82ec-8a16bec907bb",
-    limit: 5,
+    key: process.env.OPEN_CHARGER_API_KEY,
     api: 'https://api.openchargemap.io/v3/poi',
     headers: {
       'Content-Type': 'application/json'
     },
-    countrycode: 'US',
-    distance: 10,
-    distanceunit: 'miles',
-    lat: '47.6062',
-    lon: '122.3321'
+    verbose: 'false',
+    latitude: '32.779167',
+    longitude: '-96.808891',
+    distance: 25,
+    maxresults: 5
   }
 
   const [locations, setLocations] = useState(null)
 
   const getLocations = () => {
-    const api = `${searchOptions.api}?key=${searchOptions.key}&countrycode=${searchOptions.countrycode}&maxresults=${searchOptions.limit}&lat=${searchOptions.lat}&lon=${searchOptions.lon}&distance=${searchOptions.distance}&distanceunit=${searchOptions.distanceunit}`
+    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${searchOptions.latitude}&longitude=${searchOptions.longitude}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
