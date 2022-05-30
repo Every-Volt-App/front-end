@@ -1,9 +1,10 @@
 //one location details - just one specific location user selected.
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
-function LocationDetails({
-    title, address, town, postcode, telephone, isOperational, isUserSelectable, 
-    statusTypeTitle, cost, isPayAtLocation, usageTypeTitle}) {
+function LocationDetails(props) {
+
+    const {title, address, town, postcode, cost, id} = props
     
     useEffect(() => {
     }, []);
@@ -17,17 +18,11 @@ function LocationDetails({
           </div>
           {expanded ?
             (<div className="cardFull">
-            <span>{address}</span> 
-            <span>{town}</span>
-            <span>{postcode}</span>
-            <span>{telephone}</span>
-            <span>{isOperational}</span>
-            <span>{isUserSelectable}</span>
-            <span>{statusTypeTitle}</span>
-            <span>{cost}</span>
-            <span>{isPayAtLocation}</span>
-            <span>{usageTypeTitle}</span>
-            {/* <a href="/locations/id">see more</a> */}
+            <span className='addy'> Address: {address}</span> 
+            <span className='addy'>{town}</span>
+            <span className='addy'>{postcode}</span>
+            <span className='stretch'>{cost}</span>
+            <Link to={`/locations/${id}`} key={id}>see more</Link>
           </div>
             ) 
             : null

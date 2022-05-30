@@ -1,10 +1,11 @@
 //Main Page for this app will have folder of sublevel components
 import React, { useEffect, useState } from 'react'
 import Locations from './location/Locations'
+import SpecificLocation from './location/SpecificLocation'
 import { Routes, Route } from 'react-router-dom'
 
 function Main() {
-  console.log(process.env)
+  // console.log(process.env)
 
   const searchOptions = {
     key: process.env.OPEN_CHARGER_API_KEY,
@@ -27,7 +28,7 @@ function Main() {
       .then((res) => res.json())
       .then((data) => {
         setLocations(data)
-        console.log(data)
+        // console.log(data)
         // console.log(`${data[0].AddressInfo.Title}`)
       })
       .catch(console.error)
@@ -56,7 +57,7 @@ function Main() {
             locations={locations}
           />} />
         <Route exact path='/locations/:id'
-          element={<Locations
+          element={<SpecificLocation
             locations={locations}
           />} />
       </Routes>
