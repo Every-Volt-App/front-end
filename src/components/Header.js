@@ -66,6 +66,7 @@ function Header() {
     <div className="header">
       {!isAuthenticated ? unauthenticatedHeader() : authenticatedHeader()}
     </div>
+
   );
 }
 
