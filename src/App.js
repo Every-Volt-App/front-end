@@ -8,41 +8,40 @@ import { Routes, Route } from 'react-router-dom'
 import img from './components/assets/home-img.jpg'
 import './App.css';
 import Locations from './components/shared/location/Locations';
+import "./App.css";
+import { useEffect } from "react";
+import React, { useState } from "react";
+
 
 function App() {
-  const locations = [
-    {
-      name: "Wawa",
-      rating: 4,
-      cost: 0,
+  //reference to backend url
+  // const URL = "http://localhost:4000"
+  const URL = "https://every-volt-back.herokuapp.com"
 
-    },
-    {
-      name: "Charging Point",
-      rating: 5,
-      cost: 0
-    },
-    {
-      name: "EVgo",
-      rating: 2,
-      cost: 0
-    },
-    {
-      name: "Tesla Destination Charger",
-      rating: 5,
-      cost: 5
-    },
-    {
-      name: "SemaConnect",
-      rating: 3,
-      cost: 5
-    }
-  ]
+  const [data, setData] = useState()
 
- 
+  const getLink = () => {
+    fetch(`${URL}/locations`)
+      .then(res => res.json())
+      .then(data => {
+        setData(data)
+      },
+      )
+      .catch(console.error)
+  }
+
+  useEffect(() => getLink(), [])
+  // console.log(data)
+
+  if (!data) {
+    return <h2>Loading</h2>
+  }
+
+
   return (
     <div className="App">
       <Header />
+
       <div className="home-image">
         <img src={img}></img>
         <h1 className="main-text">Find the nearest <br /> EV charging station</h1>
@@ -56,8 +55,11 @@ function App() {
       </div>
    
       {/* <Locations locations={locations}/> */}
+ 
+      <Main />
+      <Nav />
+      <Footer />
 
-  
     </div>
   );
 }
