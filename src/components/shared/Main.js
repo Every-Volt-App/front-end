@@ -28,7 +28,7 @@ function Main() {
       .then((res) => res.json())
       .then((data) => {
         setLocations(data)
-        // console.log(data)
+        console.log(data, 'main')
         // console.log(`${data[0].AddressInfo.Title}`)
       })
       .catch(console.error)
