@@ -12,7 +12,7 @@ function SpecificLocation(props) {
 // console.log(locations)
 
 const thisLocation = locations.find(loc => loc.ID == id)
-console.log(thisLocation.AddressInfo.title)
+// console.log(id)
 //filter give you everything, find gives you one
 
 
