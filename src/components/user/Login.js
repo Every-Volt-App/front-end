@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
-import AuthService from "../../Services/AuthService";
+import "./Login.css";
+import AuthService from "../../services/AuthService";
 import Message from "./Message";
-import { AuthContext } from "../../Context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 
 const Login = (props) => {
   const [user, setUser] = useState({ username: "", password: "" });
@@ -20,7 +21,7 @@ const Login = (props) => {
       if (isAuthenticated) {
         authContext.setUser(user);
         authContext.setIsAuthenticated(isAuthenticated);
-        props.history.push("/todos");
+        // props.history.push("/todos");
       } else setMessage(message);
     });
   };

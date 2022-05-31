@@ -1,25 +1,25 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Nav from './components/Nav';
-import Main from './components/shared/Main';
-import img from './components/assets/home-img.jpg';
-import "./App.css";
 import React from "react";
+import "./App.css";
+
+//Components
+import Header from "./components/Header";
+import User from "./components/user/User";
+import Main from "./components/shared/Main";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
     <div className="App">
       <Header />
-      <div className="home-image">
-        <img src={img}></img>
-        <h1 className="main-text">Find the nearest <br /> EV charging station</h1>
-        <input className="searchbar" placeholder="Enter City"></input>
-      </div>
+      <User />
       <Main />
-      <Nav />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
       <Footer />
-
     </div>
   );
 }
