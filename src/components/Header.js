@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AuthService from "../services/AuthService";
 import { AuthContext } from "../context/AuthContext";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
+import Login from "../components/user/Login";
 
 function Header() {
   const { isAuthenticated, user, setIsAuthenticated, setUser } =
@@ -31,7 +32,7 @@ function Header() {
 
         <div className="header-links">
           <Link to="/user/register" id="signup-link">
-            Sign Up
+            Register
           </Link>
           <Link to="/user/login">Log In</Link>
         </div>
@@ -54,7 +55,7 @@ function Header() {
           <Link to="#" id="signup-link">
             My Account
           </Link>
-          <Link to="/" onClick={onClickLogoutHandler}>
+          <Link to="#" onClick={onClickLogoutHandler}>
             Logout
           </Link>
         </div>
@@ -66,7 +67,6 @@ function Header() {
     <div className="header">
       {!isAuthenticated ? unauthenticatedHeader() : authenticatedHeader()}
     </div>
-
   );
 }
 

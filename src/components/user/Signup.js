@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import AuthService from "../Services/AuthService";
-import Message from "../Components/Message";
+import AuthService from "../../services/AuthService";
+import Message from "./Message";
 
 const Signup = (props) => {
   const [user, setUser] = useState({ username: "", password: "", role: "" });
