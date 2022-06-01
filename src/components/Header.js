@@ -31,8 +31,8 @@ function Header() {
         </div>
 
         <div className="header-links">
-          <Link to="/user/register" id="signup-link">
-            Register
+          <Link to="/user/signup" id="signup-link">
+            Signup
           </Link>
           <Link to="/user/login">Log In</Link>
         </div>

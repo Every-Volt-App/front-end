@@ -14,9 +14,9 @@ export default {
       else return { isAuthenticated: false, user: { username: "", role: "" } };
     });
   },
-  register: (user) => {
+  signup: (user) => {
     console.log(user);
-    return fetch(`${URL}/user/register`, {
+    return fetch(`${URL}/user/signup`, {
       method: "post",
       body: JSON.stringify(user),
       headers: {
