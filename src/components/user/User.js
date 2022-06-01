@@ -9,7 +9,7 @@ const User = () => {
     <div>
       <Routes>
         <Route exact path="/user/login" element={<Login />} />
-        <Route exact path="/user/register" element={<Signup />} />
+        <Route exact path="/user/signup" element={<Signup />} />
       </Routes>
     </div>
   );

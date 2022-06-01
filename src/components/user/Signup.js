@@ -55,14 +55,18 @@ const Signup = (props) => {
           onChange={onChange}
           placeholder="Enter Password"
         />
-        <label htmlFor="role">Role: </label>
-        <input
-          type="text"
-          name="role"
-          value={user.role}
-          onChange={onChange}
-          placeholder="Enter role (admin/user)"
-        />
+        <label htmlFor="role">
+          Role:
+          <select
+            name="role"
+            value={user.role}
+            onChange={onChange}
+            defaultValue="user"
+          >
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
         <button type="submit">Sign Up</button>
       </form>
       {message ? <Message message={message} /> : null}
