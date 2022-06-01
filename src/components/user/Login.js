@@ -27,27 +27,40 @@ const Login = (props) => {
   };
 
   return (
-    <div>
+    <main className="wrapper">
+      <figure>
+        <picture>
+          <img src="https://i.imgur.com/jEIuUBP.jpg" alt="car driving through mountains" />
+        </picture>
+      </figure>
+
       <form onSubmit={onSubmit}>
-        <h3>Please Log In</h3>
-        <label htmlFor="username">Username: </label>
+        <div className="headline">
+          <h3> Log In</h3>
+          <p>Always take the scenic route.</p>
+        </div>
+        <label className="text-small-uppercase" htmlFor="username"></label>
         <input
-          type="text"
+          className="text-body"
+          type="username"
           name="username"
           onChange={onChange}
-          placeholder="Enter Username"
+          placeholder="Username"
+          required
         />
-        <label htmlFor="password">Password: </label>
+        <label className="text-small-uppercase" htmlFor="password"></label>
         <input
+          className="text-body"
           type="password"
           name="password"
           onChange={onChange}
-          placeholder="Enter Password"
+          placeholder="Password"
+          required
         />
-        <button type="submit">Log in </button>
+        <button className="text-small-uppercase" type="submit">Log in</button>
       </form>
       {message ? <Message message={message} /> : null}
-    </div>
+    </main>
   );
 };
 
