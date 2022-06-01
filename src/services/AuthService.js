@@ -1,4 +1,5 @@
-const URL = "http://localhost:4000";
+// const URL = "http://localhost:4000";
+const URL = "https://every-volt-back.herokuapp.com/";
 
 export default {
   login: (user) => {
