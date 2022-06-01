@@ -4,7 +4,7 @@ import Locations from "./location/Locations";
 import SpecificLocation from "./location/SpecificLocation";
 import { Routes, Route } from "react-router-dom";
 
-function Main() {
+function Main({long, dummy}) {
   // console.log(process.env)
 
   const searchOptions = {
@@ -23,7 +23,7 @@ function Main() {
   const [locations, setLocations] = useState(null);
 
   const getLocations = () => {
-    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${searchOptions.latitude}&longitude=${searchOptions.longitude}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`;
+    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${searchOptions.latitude}&longitude=${long}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
@@ -36,8 +36,8 @@ function Main() {
   };
 
   useEffect(() => {
-    getLocations();
-  }, []);
+    getLocations()
+  }, [dummy])
 
   if (!locations) {
     return (
