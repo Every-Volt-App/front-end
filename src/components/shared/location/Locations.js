@@ -1,25 +1,8 @@
 //5 locations (grid of 5 cards)
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import LocationDetails from './LocationDetails';
 
-function Locations(props) {
-
-  const locations = props.locations
-
-  // const [locations, setLocations] = useState([]) 
-
-  // const url = `https://api.openchargemap.io/v3/poi/openapi?key=3d636052-e9ab-4daa-82ec-8a16bec907bb/?output=json&countrycode=US&maxresults=10`
-
-//   useEffect(() => {
-//     fetch(url)
-//     .then(res => res.json())
-//     .then(data => {
-//         setLocations(data)
-//         console.log(data, 'locations')
-//     })
-//     .catch(console.error)
-// }, []);
-
+function Locations({locations}) {
 
   return (
     <div className="list-container" >

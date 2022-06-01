@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import AuthService from "../../services/AuthService";
 import Message from "./Message";
+import "./User.css";
 
 const Signup = (props) => {
   const [user, setUser] = useState({ username: "", password: "", role: "" });
@@ -36,41 +37,55 @@ const Signup = (props) => {
   };
 
   return (
-    <div>
+    <main className="wrapper">
+      <figure>
+        <picture>
+          <img src="https://i.imgur.com/Xr0zmpZ.png" alt="car on road"
+          />
+        </picture>
+      </figure>
       <form onSubmit={onSubmit}>
-        <h3>Please Sign Up</h3>
-        <label htmlFor="username">Username: </label>
+        <div className="headline">
+          <h3>Create an account</h3>
+          <p>Save your favorite charging stations and more.</p>
+        </div>
+        <label className="text-small-uppercase" htmlFor="username"></label>
         <input
-          type="text"
+          className="text-body"
+          type="username"
           name="username"
           value={user.username}
           onChange={onChange}
-          placeholder="Enter Username"
+          placeholder="Username"
+          required
         />
-        <label htmlFor="password">Password: </label>
+        <label className="text-small-uppercase" htmlFor="password"> </label>
         <input
+          className="text-body"
           type="password"
           name="password"
           value={user.password}
           onChange={onChange}
-          placeholder="Enter Password"
+          placeholder="Password"
+          required
         />
-        <label htmlFor="role">
-          Role:
-          <select
-            name="role"
-            value={user.role}
-            onChange={onChange}
-            defaultValue="user"
-          >
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
+        <label className="dropdown" htmlFor="role"> 
+          <div className="select">
+            <select
+              name="role"
+              value={user.role}
+              onChange={onChange}
+              defaultValue="user"
+            >
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
         </label>
-        <button type="submit">Sign Up</button>
+        <button className="text-small-uppercase" type="submit">Sign Up</button>
       </form>
       {message ? <Message message={message} /> : null}
-    </div>
+    </main>
   );
 };
 
