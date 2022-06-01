@@ -4,7 +4,7 @@ import Locations from "./location/Locations";
 import SpecificLocation from "./location/SpecificLocation";
 import { Routes, Route } from "react-router-dom";
 
-function Main({long, dummy}) {
+function Main({long, dummy, lat, town, state}) {
   // console.log(process.env)
 
   const searchOptions = {
@@ -14,8 +14,9 @@ function Main({long, dummy}) {
       "Content-Type": "application/json",
     },
     verbose: "false",
-    latitude: "32.779167",
-    longitude: "-96.808891",
+    // latitude: "32.779167",
+    // longitude: "-96.808891",
+    countryid: 2,
     distance: 25,
     maxresults: 5,
   };
@@ -23,7 +24,7 @@ function Main({long, dummy}) {
   const [locations, setLocations] = useState(null);
 
   const getLocations = () => {
-    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${searchOptions.latitude}&longitude=${long}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
+    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${lat}&longitude=${long}&town=${town}&state=${state}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
