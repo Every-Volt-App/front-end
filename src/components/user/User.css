@@ -1,0 +1,221 @@
+img {
+    height: 100%;
+    width: 100%
+}
+
+button {
+    background: black;
+    height: 2.75rem;
+    margin: 15em auto auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+@media (min-width: 768px) {
+    button[type=submit] {
+      background: rgb(252, 250, 250);
+      bottom: 2.75rem;
+      left: 11.5rem;
+      height: 2.75rem;
+      padding: 0 3rem;
+      position: absolute;
+    }
+  }
+  input[type=username],
+  input[type=password] {
+    height: 1.5rem;
+    margin: 0 0 1.15rem;
+    width: 100%;
+    padding-bottom: 2%;
+  }
+  figure {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  } 
+  @media (min-width: 768px) {
+    figure {
+      float: left;
+      height: 100%;
+      position: relative;
+      width: 50%;
+    }
+  }
+  form {
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+  }
+  @media (min-width: 768px) {
+    form {
+      float: left;
+      height: 78%;
+      padding-left: 6%;
+      padding-right: 6%;
+      width: 38%;
+    }
+  }
+  main {
+    margin: 30px auto auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    main {
+      height: 50rem;
+      left: 50%;
+      margin: auto;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      width: 60rem;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+input[type=username],
+input[type=password] {
+  padding-top: 2em;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #c2c7c7;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type=username]:required,
+input[type=password]:required {
+  padding-bottom: 1.5em;
+  box-shadow: none;
+  outline: none;
+}
+
+button[type=submit] {
+    background: rgb(37,53,41);
+    border: none;
+    color: rgb(247, 244, 244);
+    padding: 0 2rem;
+}
+
+button[type=submit]:hover,
+button[type=submit]:focus {
+  background: #c94519;
+  cursor: pointer;
+  outline: none;
+}
+
+.inputs--filled label {
+    transform: translate(0, 0);
+  }
+
+.inputs--invalid input {
+    animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+    border-bottom: 2px solid #f37b56;
+    box-shadow: none;
+    color: #f37b56;
+    transform: translate3d(0, 0, 0);
+  }
+
+@keyframes shake {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    33% {
+      transform: translate3d(-6px, 0, 0);
+    }
+  
+    66% {
+      transform: translate3d(6px, 0, 0);
+    }
+}
+.inputs--invalid label {
+    color: #f37b56;
+  }
+
+label {
+    display: inline-block;
+    transform: translate(0, 1.25rem);
+    transition: 0.15s;
+}
+
+main {
+    background: rgb(242,243,244);
+    border-radius: 0.25rem;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-body {
+    color: #354c58;
+    font: 700 16px 'Montserrat', sans-serif;
+  }
+  
+  .text-small-uppercase {
+    color: #aeb6b5;
+    font: 700 .75rem 'Montserrat';
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+  }
+
+.headline {
+    padding-top: 18%;
+    padding-bottom: 20%;
+}
+
+h3 {
+    font-size: 35px;
+    padding-bottom: 0.5em;
+    letter-spacing: .09em;
+}
+
+p {
+    font-size: 15px;
+    color:rgb(178,190,181) ;
+}
+
+.dropdown {
+    padding-top: 1em;
+}
+ 
+.select select {
+    text-align: center;
+    background-color: rgb(115,130,118);
+    color: white;
+    padding: 12px;
+    width: 180px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+.select::before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .select:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .select select option {
+    padding: 30px;
+  }
