@@ -27,13 +27,9 @@ function Main() {
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
-<<<<<<< HEAD
-        setLocations(data)
-        console.log(data, 'main')
-=======
         setLocations(data);
+        console.log(data, 'main')
         // console.log(data)
->>>>>>> 3eb0f3d (front end cleaned up)
         // console.log(`${data[0].AddressInfo.Title}`)
       })
       .catch(console.error);
