@@ -9,15 +9,17 @@ function SpecificLocation(props) {
   const { id} = useParams();
 
   const locations = props.locations
-// console.log(locations)
+// console.log(locations, 'loca')
 
 const thisLocation = locations.find(loc => loc.ID == id)
-// console.log(id)
+console.log(thisLocation, 'line 15')
 //filter give you everything, find gives you one
 
 
   return (
     <li className="specCardContainer">
+         {
+         thisLocation ?
       <div className="list-container">
         <span>{thisLocation.AddressInfo.Title}</span> 
         <span className="addy"> Address: {thisLocation.AddressInfo.AddressLine1}</span>
@@ -26,16 +28,46 @@ const thisLocation = locations.find(loc => loc.ID == id)
         <span className="addy">{thisLocation.AddressInfo.StateOrProvince}</span>
         <span className="stretch">Usage Cost: {thisLocation.UsageCost}</span>
         <span className="stretch">Phone: {thisLocation.AddressInfo.ContactTelephone1}</span>
-        <span className="stretch">Operational: {thisLocation.StatusType.IsOperational ? "yes" : "no"}</span>
-        <span className="stretch">User Selectable: {thisLocation.StatusType.IsUserSelectable ? "yes" : "no"}</span>
-        <span className="stretch">Status Type: {thisLocation.StatusType.Title}</span>
+          {
+            thisLocation.StatusType ?
+      <div>
+        <span className="stretch">Operational: {(thisLocation.StatusType && thisLocation.StatusType.isOperational === "true") ? "yes" : "no"}</span>
+        <span className="stretch">User Selectable: {(thisLocation.StatusType && thisLocation.IsUserSelectable === "true") ? "yes" : "no"}</span> 
+        <span className="stretch">Status Type: {(thisLocation.StatusType && thisLocation.StatusType.Title) ? "yes" : "no"}</span>
+      </div>
+        : "Operation Status information not available"
+          }
         <span className="stretch">Pay at location: {thisLocation.UsageType.IsPayAtLocation === "false" ? "no" : "yes" }</span>
         <span className="stretch">{thisLocation.UsageType.Title}</span>
       </div>
+      : null }
     </li>
   );
 }
 
 export default SpecificLocation;
+
+/*
+Dallas
+long
+-96.796989
+
+lat
+32.776665
+
+Orlando
+long
+-81.379234
+lat
+28.538336
+
+NYC
+long
+
+lat
+
+Operational: {operationalStatus}
+
+*/
 
 
