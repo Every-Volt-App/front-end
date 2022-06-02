@@ -48,7 +48,7 @@ console.log(thisLocation, 'line 15')
 export default SpecificLocation;
 
 /*
-Dallas
+Dallas - does not have StatusType. Fixed glitch to show StatusType regardless
 long
 -96.796989
 
@@ -61,11 +61,7 @@ long
 lat
 28.538336
 
-NYC
-long
-
-lat
-
+opt to clean up code
 Operational: {operationalStatus}
 
 */
