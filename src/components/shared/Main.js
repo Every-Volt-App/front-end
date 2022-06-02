@@ -4,11 +4,12 @@ import Locations from "./location/Locations";
 import SpecificLocation from "./location/SpecificLocation";
 import { Routes, Route } from "react-router-dom";
 
-function Main({long, dummy, lat, town, state}) {
+function Main({long, button, lat}) {
   // console.log(process.env)
 
   const searchOptions = {
-    key: process.env.OPEN_CHARGER_API_KEY,
+    key: process.env.REACT_APP_OPEN_CHARGER_API_KEY,
+    // key: process.env.OPEN_CHARGER_API_KEY,
     api: "https://api.openchargemap.io/v3/poi",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +25,8 @@ function Main({long, dummy, lat, town, state}) {
   const [locations, setLocations] = useState(null);
 
   const getLocations = () => {
-    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${lat}&longitude=${long}&town=${town}&state=${state}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
+    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${lat}&longitude=${long}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
+    console.log(api)
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
@@ -38,7 +40,7 @@ function Main({long, dummy, lat, town, state}) {
 
   useEffect(() => {
     getLocations()
-  }, [dummy])
+  }, [button])
 
   if (!locations) {
     return (
