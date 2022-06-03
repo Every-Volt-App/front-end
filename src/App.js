@@ -41,7 +41,6 @@ import Profile from "./components/user/Profile";
       <Main />
       <Nav />
       <Footer /> */}
-
       <Locations />
       {/* <Profile /> */}
       {/* <LocationDetails /> */}
