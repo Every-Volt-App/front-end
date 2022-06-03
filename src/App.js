@@ -1,24 +1,29 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Main from './components/shared/Main';
-import img from './components/assets/home-img.jpg';
+import React from "react";
 import "./App.css";
-import React, {useState} from "react";
+import { Routes, Route } from 'react-router-dom'
+import Locations from './components/shared/location/Locations';
 
-function App() {
-  const [long, setLong] = useState(-73.990125)
-  const [lat, setLat] = useState(40.739758) 
-  
-  function submissionButton(){
-      console.log('clicked received')
-    }
-  
+//Components
+import Header from "./components/Header";
+import User from "./components/user/User";
+import Main from "./components/shared/Main";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import LocationDetails from "./components/shared/location/LocationDetails";
+import Profile from "./components/user/Profile";
 
-  // const [dummy, setDummy] = useState(0)
+
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
+      <User />
+      <Main />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+      <Footer /> */}
+      {/* <Header />
       <div className="home-image">
         <img src={img}></img>
         <h1 className="main-text">Find the nearest <br /> EV charging station</h1>
@@ -27,12 +32,19 @@ function App() {
         <input onBlur={e=>setLong(e.target.value)} placeholder="Longitude"></input>
         <button onClick={e=>submissionButton(e.target.value)}>Submit</button>
       </div>
-      <Main 
-      long={long}
-      lat={lat}
-      button={submissionButton}
-      />
-      <Footer />
+
+      <div className="app-main">
+        <Routes>
+          <Route exact path="/user/login" element={<Login />} />
+        </Routes>
+      </div>
+      <Main />
+      <Nav />
+      <Footer /> */}
+
+      <Locations />
+      {/* <Profile /> */}
+      {/* <LocationDetails /> */}
     </div>
   );
 }

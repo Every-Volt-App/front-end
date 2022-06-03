@@ -86,9 +86,12 @@ function Locations() {
           )
         })}  
 import Nav from '../../Nav';
+import { useState, useEffect } from 'react'
 import Header from '../../Header';
+
 function Locations() {
 
+ 
   const [locations, setLocations] = useState([]) 
 
   const url = `https://api.openchargemap.io/v3/poi/openapi?key=3d636052-e9ab-4daa-82ec-8a16bec907bb/?output=json&countrycode=US&maxresults=10`
@@ -105,11 +108,14 @@ function Locations() {
 
   return (
     <div>
-      <header className="hero">
+      <div className="header-nav">
+        <Header />
+      </div>
+      <div className="hero">
         <div className="hero-nav">
-          <Header />
+        
         </div>
-      </header>
+      </div>
       
       <div className="loc-flex">
         <div className="map"></div>

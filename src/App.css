@@ -330,6 +330,21 @@ img {
   letter-spacing: 2px;
 }
 
+  margin: auto;
+  background: tan;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.title{
+  margin: auto;
+  font-family: 'Bebas Neue';
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+
 .cost-div{
   display: flex;
   margin-top: auto;
@@ -347,6 +362,49 @@ img {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.address-div{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-top: 50px;
+  font-family: 'Roboto';
+}
+
+.rating-div{
+  width:1200px;
+  height: 500px;
+  background:tan;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+
+.rating{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+  
+}
+
+.boxes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 45px;
+}
+
+.box{
+  width: 300px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
+  padding: 15px;
 }
 
 .address-div{
