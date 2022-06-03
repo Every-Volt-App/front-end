@@ -144,9 +144,10 @@ img {
   text-transform: uppercase;
 }
 
-.searchbar{
+
+input[type=Longitude] {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
@@ -157,6 +158,18 @@ img {
   text-align: center;
 }
 
+input[type=Latitude] {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
 
 .stretch {
   display: block;
