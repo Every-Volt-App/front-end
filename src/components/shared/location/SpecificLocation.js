@@ -23,6 +23,7 @@ const thisLocation = locations.find(loc => loc.ID == id)
         <span className="addy"> Address: {thisLocation.AddressInfo.AddressLine1}</span>
         <span className="addy"> {thisLocation.AddressInfo.Town}</span>
         <span className="addy"> {thisLocation.AddressInfo.Postcode}</span>
+        <span className="addy">{thisLocation.AddressInfo.StateOrProvince}</span>
         <span className="stretch">Usage Cost: {thisLocation.UsageCost}</span>
         <span className="stretch">Phone: {thisLocation.AddressInfo.ContactTelephone1}</span>
         <span className="stretch">Operational: {thisLocation.StatusType.IsOperational ? "yes" : "no"}</span>
