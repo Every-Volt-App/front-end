@@ -37,4 +37,7 @@ function App() {
   );
 }
 
-export default App
+export default App;
+
+//submissionButton does not have actual functionality. Code is set to run once user clicks 
+//outside of long/lat boxes. User should be none the wiser

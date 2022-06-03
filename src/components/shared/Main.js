@@ -15,8 +15,6 @@ function Main({long, button, lat}) {
       "Content-Type": "application/json",
     },
     verbose: "false",
-    // latitude: "32.779167",
-    // longitude: "-96.808891",
     countryid: 2,
     distance: 25,
     maxresults: 5,

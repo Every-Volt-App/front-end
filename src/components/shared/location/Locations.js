@@ -77,12 +77,7 @@ function Locations() {
               postcode={location.AddressInfo.Postcode}
               state={location.AddressInfo.StateOrProvince}
               telephone={location.AddressInfo.ContactTelephone1}
-              // isOperational={location.StatusType.IsOpertional}
-              // isUserSelectable={location.StatusType.IsUserSelectable}
-              // statusTypeTitle={location.StatusType.Title}
               cost={location.UsageCost}
-              // isPayAtLocation={location.UsageType.IsPayAtLocation}
-              // usageTypeTitle={location.UsageType.Title}
               id={location.ID}
               lat={location.AddressInfo.Latitude}
               long={location.AddressInfo.Longitude}
