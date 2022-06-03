@@ -165,7 +165,6 @@ img {
 
 
 
-
 /* Locations page */
 
 .hero{
@@ -448,4 +447,7 @@ img {
   border-radius: 10px;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
   padding: 15px;
+.footer {
+  height: 50px;
+  margin-top: -50px;
 }
