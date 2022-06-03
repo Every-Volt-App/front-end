@@ -30,7 +30,7 @@ const Login = (props) => {
     <main className="wrapper">
       <figure>
         <picture>
-          <img src="https://i.imgur.com/jEIuUBP.jpg" alt="car driving through mountains" />
+          <img className="user-image" src="https://i.imgur.com/jEIuUBP.jpg" alt="car driving through mountains" />
         </picture>
       </figure>
 

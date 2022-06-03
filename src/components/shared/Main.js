@@ -4,34 +4,33 @@ import Locations from "./location/Locations";
 import SpecificLocation from "./location/SpecificLocation";
 import { Routes, Route } from "react-router-dom";
 
-function Main({long, button, lat}) {
+function Main({ latitude, longitude, button }) {
   // console.log(process.env)
-
+  console.log(`${longitude}`) //not reading longitude, came back as undefined
+  console.log(`${latitude}`) //not reading longitude, came back as undefined
   const searchOptions = {
     key: process.env.REACT_APP_OPEN_CHARGER_API_KEY,
-    // key: process.env.OPEN_CHARGER_API_KEY,
     api: "https://api.openchargemap.io/v3/poi",
     headers: {
       "Content-Type": "application/json",
     },
     verbose: "false",
-    countryid: 2,
+    countryID: "2",
     distance: 25,
     maxresults: 5,
   };
 
   const [locations, setLocations] = useState(null);
 
+
   const getLocations = () => {
-    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${lat}&longitude=${long}&distance=${searchOptions.distance}&maxresults=${searchOptions.maxresults}`
-    console.log(api)
+    const api = `${searchOptions.api}?key=${searchOptions.key}&verbose=${searchOptions.verbose}&latitude=${latitude}&longitude=${longitude}&distance=${searchOptions.distance}&countryid=${searchOptions.countryID}&maxresults=${searchOptions.maxresults}`
+    // console.log(api)
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
         setLocations(data);
-        console.log(data, 'main')
-        // console.log(data)
-        // console.log(`${data[0].AddressInfo.Title}`)
+        // console.log(data, 'main')
       })
       .catch(console.error);
   };
@@ -39,6 +38,7 @@ function Main({long, button, lat}) {
   useEffect(() => {
     getLocations()
   }, [button])
+
 
   if (!locations) {
     return (

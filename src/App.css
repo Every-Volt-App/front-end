@@ -127,7 +127,7 @@ img {
 }
 
 .home-image{
-  position: relativ jye;
+  position: relative jye;
   text-align: center;
   color: white;
   
@@ -463,4 +463,15 @@ input[type=Latitude] {
 .footer {
   height: 50px;
   margin-top: -50px;
+}
+
+.get-locations {
+  /* position: absolute; */
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+  background-color: thistle;
 }
