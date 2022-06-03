@@ -5,8 +5,22 @@ import AuthService from "../services/AuthService";
 import { AuthContext } from "../context/AuthContext";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import Login from "../components/user/Login";
+import { useState } from 'react'
 
 function Header() {
+
+  const [navbar, setNavbar] = useState(false)
+
+  const changeNav = () => {
+    if(window.scrollY >= 80){
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeNav)
+
   const { isAuthenticated, user, setIsAuthenticated, setUser } =
     useContext(AuthContext);
 
@@ -64,9 +78,11 @@ function Header() {
   };
 
   return (
-    <div className="header">
+    <>
+    <div className={navbar ? "header active" : "header" }>
       {!isAuthenticated ? unauthenticatedHeader() : authenticatedHeader()}
     </div>
+    </>
   );
 }
 

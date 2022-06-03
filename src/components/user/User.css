@@ -5,8 +5,10 @@ img {
 
 button {
     background: black;
+    color: white;
+    padding: 10px;
     height: 2.75rem;
-    margin: 15em auto auto;
+    /* margin: 15em auto auto; */
     display: block;
     border-radius: 8px;
   }

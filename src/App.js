@@ -1,10 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
 import "./App.css";
-=======
 import { Routes, Route } from 'react-router-dom'
 import Locations from './components/shared/location/Locations';
->>>>>>> 99e9ce6 (locations.js css)
 
 //Components
 import Header from "./components/Header";
@@ -12,21 +9,21 @@ import User from "./components/user/User";
 import Main from "./components/shared/Main";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import LocationDetails from "./components/shared/location/LocationDetails";
+import Profile from "./components/user/Profile";
 
-import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Header />
+      {/* <Header />
       <User />
       <Main />
       <Routes>
         <Route exact path="/" element={<Home />} />
       </Routes>
-      <Footer />
-=======
+      <Footer /> */}
       {/* <Header />
       <div className="home-image">
         <img src={img}></img>
@@ -44,8 +41,8 @@ function App() {
       <Footer /> */}
 
       <Locations />
-
->>>>>>> 99e9ce6 (locations.js css)
+      {/* <Profile /> */}
+      {/* <LocationDetails /> */}
     </div>
   );
 }
