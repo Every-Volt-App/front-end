@@ -2,24 +2,24 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../services/AuthService";
+import ProfileService from "../services/ProfileService";
 import { AuthContext } from "../context/AuthContext";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import Login from "../components/user/Login";
-import { useState } from 'react'
+import { useState } from "react";
 
 function Header() {
-
-  const [navbar, setNavbar] = useState(false)
+  const [navbar, setNavbar] = useState(false);
 
   const changeNav = () => {
-    if(window.scrollY >= 80){
-      setNavbar(true)
+    if (window.scrollY >= 80) {
+      setNavbar(true);
     } else {
-      setNavbar(false)
+      setNavbar(false);
     }
-  }
+  };
 
-  window.addEventListener('scroll', changeNav)
+  window.addEventListener("scroll", changeNav);
 
   const { isAuthenticated, user, setIsAuthenticated, setUser } =
     useContext(AuthContext);
@@ -66,7 +66,7 @@ function Header() {
         </div>
 
         <div className="header-links">
-          <Link to="#" id="signup-link">
+          <Link to="/user/profile/:id" id="signup-link">
             My Account
           </Link>
           <Link to="#" onClick={onClickLogoutHandler}>
@@ -79,9 +79,9 @@ function Header() {
 
   return (
     <>
-    <div className={navbar ? "header active" : "header" }>
-      {!isAuthenticated ? unauthenticatedHeader() : authenticatedHeader()}
-    </div>
+      <div className={navbar ? "header active" : "header"}>
+        {!isAuthenticated ? unauthenticatedHeader() : authenticatedHeader()}
+      </div>
     </>
   );
 }
