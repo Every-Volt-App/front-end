@@ -21,7 +21,7 @@ function Header() {
 
   window.addEventListener("scroll", changeNav);
 
-  const { isAuthenticated, user, setIsAuthenticated, setUser } =
+  const { isAuthenticated, setIsAuthenticated, setUser } =
     useContext(AuthContext);
 
   const onClickLogoutHandler = () => {
@@ -59,17 +59,17 @@ function Header() {
       <>
         <div className="header-links">
           <ElectricBoltIcon />
-          <Link to="#" id="logo-link">
+          <Link to="/" id="logo-link">
             Every Volt
           </Link>
-          <Link to="#">Locations</Link>
+          <Link to="/locations">Locations</Link>
         </div>
 
         <div className="header-links">
           <Link to="/user/profile/:id" id="signup-link">
             My Account
           </Link>
-          <Link to="#" onClick={onClickLogoutHandler}>
+          <Link type="button" to="#" onClick={onClickLogoutHandler}>
             Logout
           </Link>
         </div>
