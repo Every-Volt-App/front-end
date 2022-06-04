@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import LocationDetails from './LocationDetails';
 import MapContainer from './MapContainer'
 import '../../App.css'
-import Header from '../Header';
+// import Header from '../Header';
 
 function Locations() {
 
@@ -62,16 +62,14 @@ function Locations() {
 
   return (
     <div>
-     
       <div className="hero">
-
-      </div>
-      <div className="lat-form">
-      <form onSubmit={handleSubmit} className="form">
-        <input className="searchbar" type="integer" onBlur={e => setLat(e.target.value)} placeholder="Latitude"></input>
-        <input className="searchbar" type="integer"onBlur={e => setLong(e.target.value)} placeholder="Longitude"></input>
-        <button className="coor" onClick={e => submissionButton(e.target.value)}>Submit</button>
-      </form>
+        <div className="lat-form">
+          <form onSubmit={handleSubmit} className="form">
+            <input className="searchbar" type="integer" onBlur={e => setLat(e.target.value)} placeholder="Latitude"></input>
+            <input className="searchbar" type="integer" onBlur={e => setLong(e.target.value)} placeholder="Longitude"></input>
+            <button className="coor" onClick={e => submissionButton(e.target.value)}>Submit</button>
+          </form>
+        </div>
       </div>
       <div className="loc-flex">
         <div className="map">
