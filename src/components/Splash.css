@@ -20,28 +20,98 @@
   }
 
   .splash-header h1 {
-    font-family: "Raleway", sans-serif;
-    font-size: 3rem;
+    font: 700 16px 'Montserrat', sans-serif;
+    font-size: 5rem;
     font-weight: 600;
     letter-spacing: 0.2rem;
     color: white;
     /* padding: 25px 8px; */
     /* padding-top: -3em; */
-    padding-bottom: 1em;
-    top: 40%;
+    padding-bottom: 0.5em;
+    top: 90%;
   }
 
-  .splash-button {
-    -webkit-appearance: button;
+  .splash-header h2 {
     font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.15rem;
-    color: black;
-    background-color: #fff200;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-    border: none;
-    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    color: rgb(27, 52, 45);
   }
+
+  .splash-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    color: rgba(250, 250, 250, 0.726);
+    display: wrap;
+    padding-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 1.5%;
+  }
+  .splash-button {
+    font-size: 1.4rem;
+    width: 130px;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(189,183,107);
+  background: linear-gradient(0deg, rgb(137,138,116 0%), rgb(128,128,0) 100%);
+  }
+  .btn-5:hover {
+    color: rgb(36,36,0);
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgb(75,83,32);
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px rgba(71, 9, 9, 0.133);
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+
+
+

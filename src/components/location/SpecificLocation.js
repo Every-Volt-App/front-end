@@ -10,35 +10,35 @@ function SpecificLocation(props) {
 
   const locations = props.locations
 // console.log(locations, 'loca')
-
-const thisLocation = locations.find(loc => loc.ID == id)
-console.log(thisLocation, 'line 15')
+ 
+// const thisLocation = location.find(loc => loc.ID == id)
+// console.log(thisLocation, 'line 15')
 //filter give you everything, find gives you one
 
 
   return (
     <li className="specCardContainer">
          {
-         thisLocation ?
+         locations ?
       <div className="list-container">
-        <span>{thisLocation.AddressInfo.Title}</span> 
-        <span className="addy"> Address: {thisLocation.AddressInfo.AddressLine1}</span>
-        <span className="addy"> {thisLocation.AddressInfo.Town}</span>
-        <span className="addy"> {thisLocation.AddressInfo.Postcode}</span>
-        <span className="addy">{thisLocation.AddressInfo.StateOrProvince}</span>
-        <span className="stretch">Usage Cost: {thisLocation.UsageCost}</span>
-        <span className="stretch">Phone: {thisLocation.AddressInfo.ContactTelephone1}</span>
+        <span>{locations.AddressInfo.Title}</span> 
+        <span className="addy"> Address: {locations.AddressInfo.AddressLine1}</span>
+        <span className="addy"> {locations.AddressInfo.Town}</span>
+        <span className="addy"> {locations.AddressInfo.Postcode}</span>
+        <span className="addy">{locations.AddressInfo.StateOrProvince}</span>
+        <span className="stretch">Usage Cost: {locations.UsageCost}</span>
+        <span className="stretch">Phone: {locations.AddressInfo.ContactTelephone1}</span>
           {
-            thisLocation.StatusType ?
+            locations.StatusType ?
       <div>
-        <span className="stretch">Operational: {(thisLocation.StatusType && thisLocation.StatusType.isOperational === "true") ? "yes" : "no"}</span>
-        <span className="stretch">User Selectable: {(thisLocation.StatusType && thisLocation.IsUserSelectable === "true") ? "yes" : "no"}</span> 
-        <span className="stretch">Status Type: {(thisLocation.StatusType && thisLocation.StatusType.Title) ? "yes" : "no"}</span>
+        <span className="stretch">Operational: {(locations.StatusType && locations.StatusType.isOperational === "true") ? "yes" : "no"}</span>
+        <span className="stretch">User Selectable: {(locations.StatusType && locations.IsUserSelectable === "true") ? "yes" : "no"}</span> 
+        <span className="stretch">Status Type: {(locations.StatusType && locations.StatusType.Title) ? "yes" : "no"}</span>
       </div>
         : "Operation Status information not available"
           }
-        <span className="stretch">Pay at location: {thisLocation.UsageType.IsPayAtLocation === "false" ? "no" : "yes" }</span>
-        <span className="stretch">{thisLocation.UsageType.Title}</span>
+        <span className="stretch">Pay at location: {locations.UsageType.IsPayAtLocation === "false" ? "no" : "yes" }</span>
+        <span className="stretch">{locations.UsageType.Title}</span>
       </div>
       : null }
     </li>

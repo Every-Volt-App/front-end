@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import LocationDetails from './LocationDetails';
 import MapContainer from './MapContainer'
 import '../../App.css'
+import SpecificLocation from './SpecificLocation';
 // import Header from '../Header';
 
 function Locations() {
@@ -26,7 +27,7 @@ function Locations() {
     verbose: "false",
     countryID: "2",
     distance: 25,
-    maxresults: 5
+    maxresults: 10
   };
 
   const getLocations = () => {
@@ -36,7 +37,7 @@ function Locations() {
       .then((res) => res.json())
       .then((data) => {
         setLocations(data);
-        console.log(data, 'main')
+        // console.log(data, 'main')
       })
       .catch(console.error);
   };
@@ -81,17 +82,19 @@ function Locations() {
             return (
               <ul className="LocDiv" key={location.ID}>
                 <LocationDetails
+                  location={location}
                   title={location.AddressInfo.Title}
                   address={location.AddressInfo.AddressLine1}
                   town={location.AddressInfo.Town}
                   postcode={location.AddressInfo.Postcode}
                   state={location.AddressInfo.StateOrProvince}
-                  telephone={location.AddressInfo.ContactTelephone1}
+                  telephone={location.AddressInfo.ContactTelephone1}rt5
                   cost={location.UsageCost}
                   id={location.ID}
                   lat={location.AddressInfo.Latitude}
                   long={location.AddressInfo.Longitude}
                 />
+                {/* <SpecificLocation location={location}/> */}
               </ul>
             )
           })}

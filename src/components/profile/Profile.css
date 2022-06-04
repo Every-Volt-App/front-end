@@ -1,0 +1,102 @@
+@media (min-width: 768px) {
+    input[type=text]{
+      height: 1.0rem;
+      /* margin: 0 0 1.15rem; */
+      width: 100%;
+      padding: 1%;
+    }
+}
+@media (min-width: 768px) {
+    .profile-form {
+      float: left;
+      height: 85%;
+      padding-left: 6%;
+      padding-right: 6%;
+      width: 38%;
+    }
+  }
+  input[type=text] {
+    padding-top: 2em;
+    padding-bottom: .75em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #c2c7c7;
+    box-sizing: border-box;
+    outline: none;
+  }
+  input[type=text]:required{
+    padding-bottom: 1.5em;
+    box-shadow: none;
+    outline: none;
+  }
+
+.state-select select {
+    margin: 0 auto;
+    /* padding-left: 5%; */
+    text-align: center;
+    background-color: rgb(115,130,118);
+    color: white;
+    padding: 8px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    /* padding-bottom: 1em; */
+  }
+
+.car-select select {
+    text-align: center;
+    background-color: rgb(115,130,118);
+    color: white;
+    border: none;
+    padding: .25em;
+    width: 60%;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    margin-bottom: 1.0em;
+}
+
+
+
+  .state-select::before {
+    font-family: FontAwesome;
+    position: absolute;
+    /* top: 0; */
+    /* right: 0; */
+    /* width: 20%; */
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+
+  .profile-text-body {
+    color: #354c58;
+    font: 700 16px 'Montserrat', sans-serif;
+  }
+
+  .profile-text-small-uppercase {
+    color: #aeb6b5;
+    font: 700 .75rem 'Montserrat';
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+  }
+
+h4 {
+    padding-top: 4%;
+    text-align: center;
+}
+
+.profile-form {
+    padding-bottom: 0;
+    padding-top: 3em;
+}
+
