@@ -3,7 +3,6 @@ const URL = "https://every-volt-back.herokuapp.com";
 
 export default {
   login: (user) => {
-    console.log(user);
     return fetch(`${URL}/user/login`, {
       method: "post",
       body: JSON.stringify(user),
@@ -16,7 +15,6 @@ export default {
     });
   },
   signup: (user) => {
-    console.log(user);
     return fetch(`${URL}/user/signup`, {
       method: "post",
       body: JSON.stringify(user),
