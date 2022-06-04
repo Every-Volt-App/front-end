@@ -1,7 +1,7 @@
 .splash-wrapper {
     width: auto;
     height: 100vh;
-    background-image: linear-gradient( rgba(178,190,181), rgba(33, 74, 41, 0.5)), url("https://i.imgur.com/jEIuUBP.jpg");
+    background-image: linear-gradient( rgb(145, 173, 152), rgba(33, 74, 41, 0.5)), url("https://i.imgur.com/jEIuUBP.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
