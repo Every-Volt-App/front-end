@@ -98,11 +98,11 @@ function Locations() {
         </div>
       </div>
       {/* <label htmlFor="Latitude">Username:</label> */}
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <input className="searchbar" type="integer" onBlur={e => setLat(e.target.value)} placeholder="Latitude"></input>
         <input className="searchbar" type="integer" onBlur={e => setLong(e.target.value)} placeholder="Longitude"></input>
         <button className="coor" onClick={e => submissionButton(e.target.value)}>Submit</button>
-      </form>
+      </form> */}
     </div>
   )
 }
