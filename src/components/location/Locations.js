@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import LocationDetails from './LocationDetails';
+import MapContainer from './MapContainer'
 import '../../App.css'
 import Header from '../Header';
 
@@ -73,7 +74,9 @@ function Locations() {
       </form>
       </div>
       <div className="loc-flex">
-        <div className="map"></div>
+        <div className="map">
+          <MapContainer locations={locations} />
+        </div>
         <div className="list-container" >
 
           {locations.map(location => {
@@ -96,8 +99,12 @@ function Locations() {
           })}
         </div>
       </div>
-   
-   
+      {/* <label htmlFor="Latitude">Username:</label> */}
+      <form onSubmit={handleSubmit}>
+        <input className="searchbar" type="integer" onBlur={e => setLat(e.target.value)} placeholder="Latitude"></input>
+        <input className="searchbar" type="integer" onBlur={e => setLong(e.target.value)} placeholder="Longitude"></input>
+        <button className="coor" onClick={e => submissionButton(e.target.value)}>Submit</button>
+      </form>
     </div>
   )
 }
