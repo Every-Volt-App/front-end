@@ -8,9 +8,11 @@ function Splash() {
       <div className='splash-container'>
 
       <div className='splash-header'>
-        <h1 >Find the nearest EV charging stations</h1>
+        <h1>EVERY VOLT</h1>
+        <h2>Go Anywhere</h2>
+        <p>Every Volt connects you with all of the largest global charging networks in the world. Simply plug in, charge and go.</p>
         <Link to="/locations">
-        <button className='splash-button'>Start</button>
+        <button className='splash-button btn-5'>Find Us</button>
       </Link>
       </div>
     </div>

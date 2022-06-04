@@ -2,16 +2,16 @@
 import React from "react"
 import { useParams } from "react-router-dom";
 
-function SpecificLocation(props) {
+function SpecificLocation({location}) {
 
-  console.log(props)
+  console.log(location)
 
   const { id} = useParams();
 
-  const locations = props.locations
+  // const locations = props.locations
 // console.log(locations, 'loca')
-
-const thisLocation = locations.find(loc => loc.ID == id)
+ 
+const thisLocation = location.find(loc => loc.ID == id)
 console.log(thisLocation, 'line 15')
 //filter give you everything, find gives you one
 

@@ -70,7 +70,7 @@ button {
       margin: auto;
       position: absolute;
       transform: translate(-50%, -50%);
-      top: 50%;
+      top: 55%;
       width: 60rem;
     }
   }
@@ -178,7 +178,6 @@ h3 {
 p {
     font-size: 15px;
     color:rgb(178,190,181) ;
-
 }
 
 .dropdown {

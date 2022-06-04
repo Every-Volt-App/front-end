@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import StarRateIcon from '@mui/icons-material/StarRate';
 // import Paper from '@mui/material/Paper';
 import StarHalf from "@mui/icons-material/StarHalf";
+import SpecificLocation from "./SpecificLocation";
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function LocationDetails(props) {
   const { title, address, town, postcode, cost, id } = props
+  console.log(props)
   useEffect(() => {
   }, []);
   const [expanded, setExpanded] = useState(false)
@@ -18,9 +20,9 @@ function LocationDetails(props) {
            
         </div> */}
       {/* <div className="location-hero"> */}
-        {/* <h1 className="title">Location</h1> */}
+      {/* <h1 className="title">Location</h1> */}
       {/* </div> */}
-{/*       <section className="location-info">
+      {/*       <section className="location-info">
         <div className="address-div">
           <h1>Address</h1>
           <h1>Phone Number</h1>
@@ -56,10 +58,12 @@ function LocationDetails(props) {
         {expanded ?
           (<div className="cardFull">
             <span className='addy'> Address: {address}</span>
+            <br />
             <span className='addy'>{town}</span>
+            <br />
             <span className='addy'>{postcode}</span>
             <span className='stretch'>{cost}</span>
-            <Link to={`/locations/${id}`} key={id}>see more</Link>
+            <Link className="see-more" to={`/locations/${id}`} key={id}>see more</Link>
           </div>
           )
           : null
