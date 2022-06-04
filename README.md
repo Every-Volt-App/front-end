@@ -24,11 +24,11 @@ We began brainstorming with wire frames
 
 We continued with mock-ups
 
- ![Screen Shot 2022-06-01 at 3 25 07 PM](https://user-images.githubusercontent.com/97857421/171983739-8244bbbc-6f23-47fc-b447-10e38ea22b71.png)
-
 ![login](https://user-images.githubusercontent.com/97857421/172003914-b4f5ad24-ae06-4718-9b91-e3099af879aa.gif) 
 
 ![signing in](https://user-images.githubusercontent.com/97857421/172004025-ce732cf8-7e3c-4d21-9d49-ad91f515818b.gif)
+
+![addprofile](https://user-images.githubusercontent.com/97857421/172004569-911938d6-3d2d-4e79-8ec7-fd52ba84b660.gif)
 
 ![findus](https://user-images.githubusercontent.com/97857421/172003784-3e55a32d-3d3e-4492-be35-32b790e873da.gif)
 
