@@ -1,0 +1,47 @@
+.splash-wrapper {
+    width: auto;
+    height: 100vh;
+    background-image: linear-gradient( rgb(145, 173, 152), rgba(33, 74, 41, 0.5)), url("https://i.imgur.com/jEIuUBP.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: opacity(80%);
+  }
+  .splash-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .splash-header {
+    text-align: center;
+  }
+
+  .splash-header h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: white;
+    /* padding: 25px 8px; */
+    /* padding-top: -3em; */
+    padding-bottom: 1em;
+    top: 40%;
+  }
+
+  .splash-button {
+    -webkit-appearance: button;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    color: black;
+    background-color: #fff200;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+  }

@@ -169,7 +169,10 @@ img {
   width: 1200px;
   border-top-left-radius: 50px;
   margin: auto;
-
+  padding-top: 8em;
+  padding-right: 50em;
+  /* padding-left: 50em; */
+  bottom: 0%;
 }
 
 .header_nav{
@@ -219,15 +222,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  /* padding-top: 5%; */
   padding-left: 14%;
   margin-bottom: 50px;
 }
 
 .lat-form {
-margin-top: 50px;
+margin-top: 200px;
 margin-left: 50px;
-
 }
 
 .form{

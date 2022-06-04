@@ -1,15 +1,20 @@
 import React from 'react'
-import img from "../components/assets/home-img.jpg";
-import '../App.css'
-
-
+// import img from "../components/assets/home-img.jpg";
+import './Splash.css'
+import { Link } from 'react-router-dom'
 function Splash() {
   return (
-    <div className="home-image">
-        <img src={img}></img>
-        <h1 className="main-text">Find the nearest <br /> EV charging station</h1>
-        //button Let's start that will lead to /locations. 
+    <div className='splash-wrapper'>
+      <div className='splash-container'>
+
+      <div className='splash-header'>
+        <h1 >Find the nearest EV charging stations</h1>
+        <Link to="/locations">
+        <button className='splash-button'>Start</button>
+      </Link>
+      </div>
     </div>
+      </div>
   )
 }
 
