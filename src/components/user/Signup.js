@@ -40,7 +40,10 @@ const Signup = (props) => {
     <main className="wrapper">
       <figure>
         <picture>
-          <img className="user-image" src="https://i.imgur.com/Xr0zmpZ.png" alt="car on road"
+          <img
+            className="user-image"
+            src="https://i.imgur.com/Xr0zmpZ.png"
+            alt="car on road"
           />
         </picture>
       </figure>
@@ -59,7 +62,9 @@ const Signup = (props) => {
           placeholder="Username"
           required
         />
-        <label className="text-small-uppercase" htmlFor="password"> </label>
+        <label className="text-small-uppercase" htmlFor="password">
+          {" "}
+        </label>
         <input
           className="text-body"
           type="password"
@@ -69,20 +74,20 @@ const Signup = (props) => {
           placeholder="Password"
           required
         />
-        <label className="dropdown" htmlFor="role"> 
+        <label className="dropdown" htmlFor="role">
           <div className="select">
-            <select
-              name="role"
-              value={user.role}
-              onChange={onChange}
-              defaultValue="user"
-            >
+            <select name="role" value={user.role} onChange={onChange}>
+              <option value="" selected>
+                Select Role
+              </option>
               <option value="user">User</option>
               <option value="admin">Admin</option>
             </select>
           </div>
         </label>
-        <button className="text-small-uppercase" type="submit">Sign Up</button>
+        <button className="text-small-uppercase" type="submit">
+          Sign Up
+        </button>
       </form>
       {message ? <Message message={message} /> : null}
     </main>
