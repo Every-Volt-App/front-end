@@ -7,7 +7,8 @@ const MapContainer = ({locations}) => {
 
     const mapStyles = {
         height: "50vh",
-        width: "120%"
+        width: "130%",
+        "border-radius": "20px"
     };
 
     const defaultCenter = {

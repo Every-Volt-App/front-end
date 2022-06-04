@@ -2,6 +2,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import ProfileService from "../../services/ProfileService";
 import Message from "../user/Message";
+import "./Profile.css"
 
 const CreateProfile = (props) => {
   const [profile, setProfile] = useState({
@@ -68,14 +69,23 @@ const CreateProfile = (props) => {
   };
 
   return (
-    <main className="wrapper">
-      <form onSubmit={onSubmit}>
-        <div className="headline">
+    <main className="profile-wrapper">
+      <figure>
+        <picture>
+          <img
+            className="user-image"
+            src="https://i.imgur.com/lGIaMB9.png"
+            alt="car on road"
+          />
+        </picture>
+      </figure>
+      <form className="profile-form" onSubmit={onSubmit}>
+        <div className="profile-headline">
           <h3>Create a Profile</h3>
         </div>
-        <label className="text-small-uppercase" htmlFor="profileImage"></label>
+        <label className="profile-text-small-uppercase" htmlFor="profileImage"></label>
         <input
-          className="text-body"
+          className="profile-text-body"
           type="text"
           name="profileImage"
           value={profile.profileImage}
@@ -83,18 +93,18 @@ const CreateProfile = (props) => {
           placeholder="Profile Image URL"
         />
         <h4>Primary Car Info</h4>
-        <label className="text-small-uppercase" htmlFor="make"></label>
+        <label className="profile-text-small-uppercasee" htmlFor="make"></label>
         <input
-          className="text-body"
+          className="profile-text-body"
           type="text"
           name="make"
           value={profile.make}
           onChange={onChange}
           placeholder="Make"
         />
-        <label className="text-small-uppercase" htmlFor="model"></label>
+        <label className="profile-text-small-uppercase" htmlFor="model"></label>
         <input
-          className="text-body"
+          className="profile-text-body"
           type="text"
           name="model"
           value={profile.model}
@@ -102,14 +112,14 @@ const CreateProfile = (props) => {
           placeholder="Model"
         />
         <label className="dropdown" htmlFor="connectionType">
-          <div className="select">
+          <div className="car-select">
             <select
               name="connectionType"
               value={profile.connectionType}
               onChange={onChange}
             >
               <option value="" selected>
-                Connection Type
+                Connection
               </option>
               <option value="Avcon Connector">Avcon Connector</option>
               <option value="BS1363 3 Pin 13 Amp">BS1363 3 Pin 13 Amp</option>
@@ -140,27 +150,27 @@ const CreateProfile = (props) => {
           </div>
         </label>
         <h4>Primary Address Info</h4>
-        <label className="text-small-uppercase" htmlFor="addressLine1"></label>
+        <label className="profile-text-small-uppercase" htmlFor="addressLine1"></label>
         <input
-          className="text-body"
+          className="profile-text-body"
           type="text"
           name="addressLine1"
           value={profile.addressLine1}
           onChange={onChange}
           placeholder="Address (Line 1)"
         />
-        <label className="text-small-uppercase" htmlFor="addressLine2"></label>
+        <label className="profile-text-small-uppercase" htmlFor="addressLine2"></label>
         <input
-          className="text-body"
+          className="profile-text-body"
           type="text"
           name="addressLine2"
           value={profile.addressLine2}
           onChange={onChange}
           placeholder="Address (Line 2)"
         />
-        <label className="text-small-uppercase" htmlFor="city"></label>
+        <label className="profile-text-small-uppercase" htmlFor="city"></label>
         <input
-          className="text-body"
+          className="profile-text-body"
           type="text"
           name="city"
           value={profile.city}
@@ -168,7 +178,7 @@ const CreateProfile = (props) => {
           placeholder="City"
         />
         <label className="dropdown" htmlFor="state">
-          <div className="select">
+          <div className="state-select">
             <select name="state" value={profile.state} onChange={onChange}>
               <option value="" selected>
                 State
@@ -231,9 +241,9 @@ const CreateProfile = (props) => {
             </select>
           </div>
         </label>
-        <label className="text-small-uppercase" htmlFor="zipcode">
+        <label className="profile-text-small-uppercase" htmlFor="zipcode">
           <input
-            className="text-body"
+            className="profile-text-body"
             type="text"
             name="zipcode"
             value={profile.zipcode}
@@ -241,7 +251,7 @@ const CreateProfile = (props) => {
             placeholder="Zipcode"
           />
         </label>
-        <button className="text-small-uppercase" type="submit">
+        <button className="profile-text-small-uppercase btn7" type="submit">
           Create Profile
         </button>
       </form>

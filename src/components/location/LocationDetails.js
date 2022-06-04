@@ -8,8 +8,8 @@ import SpecificLocation from "./SpecificLocation";
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function LocationDetails(props) {
-  const { title, address, town, postcode, cost, id } = props
-  console.log(props)
+  const { title, address, town, postcode, cost, state, telephone, id } = props
+  // console.log(props)
   useEffect(() => {
   }, []);
   const [expanded, setExpanded] = useState(false)
@@ -61,9 +61,10 @@ function LocationDetails(props) {
             <br />
             <span className='addy'>{town}</span>
             <br />
+            <span className='addy'> {state}</span>
             <span className='addy'>{postcode}</span>
-            <span className='stretch'>{cost}</span>
-            <Link className="see-more" to={`/locations/${id}`} key={id}>see more</Link>
+            <span className='stretch'>phone: {telephone ? telephone : "n/a"}</span>
+            <span className='stretch'>cost: {cost ? cost : "n/a"}</span>
           </div>
           )
           : null

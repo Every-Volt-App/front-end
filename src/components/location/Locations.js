@@ -37,7 +37,7 @@ function Locations() {
       .then((res) => res.json())
       .then((data) => {
         setLocations(data);
-        console.log(data, 'main')
+        // console.log(data, 'main')
       })
       .catch(console.error);
   };
