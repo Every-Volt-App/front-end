@@ -54,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  padding: 20px 8%;
   width: 1200px;
   z-index: 1;
 }
@@ -164,7 +164,7 @@ img {
   background-image: url(./components/assets/banner.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 286px;
+  height: 280px;
   object-fit: cover;
   width: 1200px;
   border-top-left-radius: 50px;
@@ -182,8 +182,8 @@ img {
 
 .list-container{
 
-  width: 70%;
-  height: 70%;
+  width: 400px;
+  height: 400px;
   overflow-y: scroll;
   margin: auto;
   font-family: 'Bebas Neue';
@@ -221,8 +221,33 @@ img {
   align-items: center;
   padding-top: 5%;
   padding-left: 14%;
+  margin-bottom: 50px;
 }
 
+.lat-form {
+margin-top: 50px;
+margin-left: 50px;
+
+}
+
+.form{
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+}
+
+.coor{
+  display: inline-block;
+  font-size: 15px;
+  font-family: 'Roboto';
+  width: 90px;
+}
+
+.searchbar{
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Roboto';
+}
 
 
 

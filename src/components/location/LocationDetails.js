@@ -18,7 +18,7 @@ function LocationDetails(props) {
            
         </div> */}
       {/* <div className="location-hero"> */}
-        <h1 className="title">Location</h1>
+        {/* <h1 className="title">Location</h1> */}
       {/* </div> */}
 {/*       <section className="location-info">
         <div className="address-div">
