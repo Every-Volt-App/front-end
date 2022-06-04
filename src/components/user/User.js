@@ -1,16 +1,11 @@
 //React component User to be exported to Charger
-import React, { useEffect, useState } from "react";
-import Login from "./Login";
-import Signup from "./Signup";
-import { Routes, Route } from "react-router-dom";
+import React  from "react";
+
 
 const User = () => {
   return (
     <div>
-      <Routes>
-        <Route exact path="/user/login" element={<Login />} />
-        <Route exact path="/user/signup" element={<Signup />} />
-      </Routes>
+      Empty for now
     </div>
   );
 };

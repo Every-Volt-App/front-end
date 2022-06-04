@@ -40,7 +40,7 @@ const Signup = (props) => {
     <main className="wrapper">
       <figure>
         <picture>
-          <img src="https://i.imgur.com/Xr0zmpZ.png" alt="car on road"
+          <img className="user-image" src="https://i.imgur.com/Xr0zmpZ.png" alt="car on road"
           />
         </picture>
       </figure>

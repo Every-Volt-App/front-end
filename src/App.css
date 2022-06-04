@@ -40,10 +40,6 @@
 
 
 
-
-
-
-
 .location-card{
   height: 100px;
   width: 380px;
@@ -127,7 +123,7 @@ img {
 }
 
 .home-image{
-  position: relativ jye;
+  position: relative jye;
   text-align: center;
   color: white;
   
@@ -144,9 +140,9 @@ img {
   text-transform: uppercase;
 }
 
-.searchbar{
+.get-locations[type=Latitude] {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
@@ -157,13 +153,9 @@ img {
   text-align: center;
 }
 
-
 .stretch {
   display: block;
 }
-
-
-
 
 
 /* Locations page */
@@ -190,8 +182,8 @@ img {
 
 .list-container{
 
-  width: 500px;
-  height: 400px;
+  width: 70%;
+  height: 70%;
   overflow-y: scroll;
   margin: auto;
   font-family: 'Bebas Neue';
@@ -328,22 +320,14 @@ img {
   font-family: 'Bebas Neue';
   font-size: 70px;
   letter-spacing: 2px;
-}
-
-  margin: auto;
-  background: tan;
+    margin: auto;
+    background: tan;
   text-align: center;
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-.title{
-  margin: auto;
-  font-family: 'Bebas Neue';
-  font-size: 70px;
-  letter-spacing: 2px;
-}
 
 .cost-div{
   display: flex;
@@ -373,8 +357,8 @@ img {
 }
 
 .rating-div{
-  width:1200px;
-  height: 500px;
+  /* width:1200px;
+  height: 500px; */
   background:tan;
   margin: auto;
   display: flex;
@@ -407,45 +391,7 @@ img {
   padding: 15px;
 }
 
-.address-div{
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  margin-top: 50px;
-  font-family: 'Roboto';
-}
-
-.rating-div{
-  width:1200px;
-  height: 500px;
-  background:tan;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
- 
-}
-
-.rating{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 40px;
-  
-}
-
-.boxes{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 45px;
-}
-
-.box{
-  width: 300px;
-  height: 250px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
-  padding: 15px;
+.button-change {
+  background-color: black;
+  margin: 0 auto;
 }

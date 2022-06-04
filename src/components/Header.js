@@ -38,10 +38,10 @@ function Header() {
       <>
         <div className="header-links">
           <ElectricBoltIcon />
-          <Link to="#" id="logo-link">
+          <Link to="/" id="logo-link">
             Every Volt
           </Link>
-          <Link to="#">Locations</Link>
+          <Link to="/locations">Locations</Link>
         </div>
 
         <div className="header-links">
