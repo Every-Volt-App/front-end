@@ -30,14 +30,14 @@ const Login = (props) => {
     <main className="wrapper">
       <figure>
         <picture>
-          <img className="user-image" src="https://i.imgur.com/jEIuUBP.jpg" alt="car driving through mountains" />
+          <img className="user-image" src="https://i.imgur.com/cuerw2V.png" alt="car driving through mountains" />
         </picture>
       </figure>
 
       <form onSubmit={onSubmit}>
         <div className="headline">
           <h3> Log In</h3>
-          <p>Always take the scenic route.</p>
+          <p>Enjoy our exclusive perks and benefits.</p>
         </div>
         <label className="text-small-uppercase" htmlFor="username"></label>
         <input
