@@ -6,6 +6,15 @@ This app of geographic electric vehicle charger data is dedicated to the contine
 United States. Users are able to input their location information to view the closest
 available charging ports in their area and rate their experience. They can also create
 an account for a more personalized experience.
+
+## Links
+
+- Front-end Repo https://github.com/Every-Volt-App/front-end/
+- Back-end Repo https://github.com/Every-Volt-App/back-end
+
+- Front-end deployment https://every-volt-front.herokuapp.com/
+- Back-end deployment https://every-volt-back.herokuapp.com/
+
  
 ### Planning Process
  
@@ -17,8 +26,11 @@ We continued with mock-ups
 
  ![Screen Shot 2022-06-01 at 3 25 07 PM](https://user-images.githubusercontent.com/97857421/171983739-8244bbbc-6f23-47fc-b447-10e38ea22b71.png)
 
- 
- ![ehoh](https://user-images.githubusercontent.com/97857421/171983742-e24e6c89-ac87-4df4-9359-2dc7f087a096.gif)
+![login](https://user-images.githubusercontent.com/97857421/172003914-b4f5ad24-ae06-4718-9b91-e3099af879aa.gif) 
+
+![signing in](https://user-images.githubusercontent.com/97857421/172004025-ce732cf8-7e3c-4d21-9d49-ad91f515818b.gif)
+
+![findus](https://user-images.githubusercontent.com/97857421/172003784-3e55a32d-3d3e-4492-be35-32b790e873da.gif)
 
 ### List of Features / User Stories
 
